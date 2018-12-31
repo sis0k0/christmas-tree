@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "watch": "webpack-dev-server --mode=development"
+    "watch": "webpack-dev-server --mode=development --open"
   },
   "keywords": [],
   "author": "Stanimira Vlaeva <stanimira.vlaeva@progress.com>",
