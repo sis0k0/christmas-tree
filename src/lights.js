@@ -2,7 +2,7 @@ import fir from './tree.js';
 
 /**
  * Changes the look of
- * some 'needles' in the three
+ * some 'needles' in the tree
  * every 1000ms
  */
 function turnOn() {
