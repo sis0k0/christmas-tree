@@ -4,6 +4,9 @@
  */
 if (module.hot) {
     module.hot.accept();
+    module.hot.dispose(_data => {
+      clearInterval(lightsInterval);
+    });
 }
 
 import fir from './tree.js';
@@ -13,12 +16,13 @@ import fir from './tree.js';
  * some 'needles' in the tree
  * every 1000ms
  */
+let lightsInterval;
 function turnOn() {
     const blinkRate = 1000;
     const rowsCount = fir.rowsCount;
     const needles = fir.getNeedles();
 
-    setInterval(() =>
+    lightsInterval = setInterval(() =>
         blink(rowsCount, needles),
         blinkRate
     );
