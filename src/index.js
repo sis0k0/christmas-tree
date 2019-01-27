@@ -4,7 +4,7 @@ import { turnOn, restart } from './lights.js';
 turnOn(fir);
 
 if (module.hot) {
-    module.hot.accept(['./tree.js'], () => {
+    module.hot.accept(['./tree.js', './lights.js'], () => {
       restart(fir);
     });
 }

@@ -7,7 +7,7 @@ if (module.hot) {
     //    clearInterval(lightsInterval);
     //    turnOn();
     // });
-    module.hot.accept();
+    // module.hot.accept();
     module.hot.dispose(_data => {
       clearInterval(lightsInterval);
     });
