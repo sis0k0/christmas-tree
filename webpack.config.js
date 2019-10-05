@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
             contentBase: './dist',
             hot: true,
         },
-        plugins: [],
+        plugins: []
     };
 
     if (argv.mode === 'development') {
