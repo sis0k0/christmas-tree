@@ -9,15 +9,11 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, "dist"),
     },
     devServer: {
-      contentBase: "./dist",
-      hot: true,
+      static: {
+        directory: path.join(__dirname, "./dist"),
+      },
     },
-    plugins: [],
   };
-
-  if (argv.mode === "development") {
-    config.plugins.push(new webpack.HotModuleReplacementPlugin());
-  }
 
   return config;
 };
